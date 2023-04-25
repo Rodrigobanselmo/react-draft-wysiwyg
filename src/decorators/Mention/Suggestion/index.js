@@ -212,10 +212,10 @@ function getSuggestionComponent() {
             return true;
           }
           if (config.caseSensitive) {
-            return suggestion.value.indexOf(mentionText) >= 0;
+            return suggestion.text.indexOf(mentionText) >= 0;
           }
           return (
-            suggestion.value
+            suggestion.text
               .toLowerCase()
               .indexOf(mentionText && mentionText.toLowerCase()) >= 0
           );
